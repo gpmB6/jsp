@@ -1,10 +1,16 @@
 package classes;
 import java.io.Serializable;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
 import classes.Pessoa;
 
-public class Colaborador extends Pessoa {
-	
+@Entity
+@DiscriminatorValue(value = "COLAB")
+public class Colaborador extends Pessoa implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	private String cpf;
 	private String tituloEleitor;
 	private boolean reservista;

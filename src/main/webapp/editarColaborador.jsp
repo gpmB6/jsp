@@ -13,7 +13,7 @@
      <jsp:useBean id="pessoaBean" class="classes.Pessoa" scope="request"/>
      <jsp:setProperty name="pessoaBean" property="idPessoa" param="idPessoa" />
         <%  
-        //Pessoa pessoa = pessoaBean.buscarID();
+        Pessoa pessoa = pessoaBean.buscarID();
         String id = String.valueOf(pessoaBean.getIdPessoa());	
         %>  
     

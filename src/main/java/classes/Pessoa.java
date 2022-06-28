@@ -1,10 +1,26 @@
 package classes;
 import java.io.Serializable;
 
-public class Pessoa {
+import javax.persistence.*;
+
+@Entity
+@Table(name="pessoas") 
+
+@Inheritance (strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo", length = 3,
+discriminatorType = DiscriminatorType.STRING)
+public class Pessoa implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idPessoa")
 	private long idPessoa;
+	
+	@Column(name = "nome", updatable = false)
 	private String nome;
+	
+	@Column(name = "endereco", updatable = false)
 	private String endereco;	
 	
 	public Pessoa(long idPessoa, String nome, String endereco) {
