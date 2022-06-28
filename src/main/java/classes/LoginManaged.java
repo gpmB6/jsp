@@ -7,7 +7,7 @@ import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 */
 
-import dao.UsuarioDAO;
+import dao.PessoaDAO;
 import classes.Usuario;
 
 public class LoginManaged {
@@ -16,7 +16,7 @@ public class LoginManaged {
 	@ViewScoped */
 	public class LoginManagedBean {
 
-	    private UsuarioDAO usuarioDAO = new UsuarioDAO();
+	    private PessoaDAO usuarioDAO = new PessoaDAO();
 	    private Usuario usuario = new Usuario();
 
 	    public String envia() {
@@ -36,11 +36,11 @@ public class LoginManaged {
 
 	    }
 
-	    public UsuarioDAO getUsuarioDAO() {
+	    public PessoaDAO getUsuarioDAO() {
 	        return usuarioDAO;
 	    }
 
-	    public void setUsuarioDAO(UsuarioDAO usuarioDAO) {
+	    public void setUsuarioDAO(PessoaDAO usuarioDAO) {
 	        this.usuarioDAO = usuarioDAO;
 	    }
 

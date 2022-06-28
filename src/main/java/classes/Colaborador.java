@@ -4,8 +4,6 @@ import java.io.Serializable;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-import classes.Pessoa;
-
 @Entity
 @DiscriminatorValue(value = "COLAB")
 public class Colaborador extends Pessoa implements Serializable {
@@ -16,6 +14,10 @@ public class Colaborador extends Pessoa implements Serializable {
 	private boolean reservista;
 	private String email;
 	private double salario;
+	
+	public Colaborador() {
+		
+	}
 	
 	public Colaborador(long idPessoa, String nome, String endereco, String cpf, String tituloEleitor, boolean reservista, String email, double salario) {
         super(idPessoa, nome, endereco);

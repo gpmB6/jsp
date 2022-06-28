@@ -23,6 +23,10 @@ public class Pessoa implements Serializable {
 	@Column(name = "endereco", updatable = false)
 	private String endereco;	
 	
+	public Pessoa() {
+		
+	}
+	
 	public Pessoa(long idPessoa, String nome, String endereco) {
 		this.idPessoa = idPessoa;
 		this.nome = nome;
