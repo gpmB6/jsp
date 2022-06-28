@@ -1,4 +1,3 @@
-
 <%@page import="classes.Usuario" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page errorPage="paginaErro.jsp"%>
@@ -12,7 +11,7 @@
         <jsp:useBean id="usuarioBean" class="classes.Usuario" scope="request"/>
         <jsp:setProperty name="usuarioBean" property="*" /> 
         <%
-            if (Usuario.valida()) {
+            if (Usuario.validate()) {
         %>
         <jsp:forward page = "Mensagem.jsp" > 
             <jsp:param name = "nome" value = "<%=usuarioBean.getNome()%>" /> 

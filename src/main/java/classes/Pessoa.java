@@ -8,7 +8,6 @@ public class Pessoa {
 	private String endereco;	
 	
 	public Pessoa(long idPessoa, String nome, String endereco) {
-		super();
 		this.idPessoa = idPessoa;
 		this.nome = nome;
 		this.endereco = endereco;
