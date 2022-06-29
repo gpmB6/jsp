@@ -54,24 +54,4 @@ public class Usuario implements Serializable{
 		return "Usuario [nome=" + nome + ", senha=" + senha + "]" + idUsuario;
 	}
 	
-	public boolean salvar() {
-		return new PessoaDAO().salvar(this);
-	}
-	
-	public List<Usuario> buscarTodos(){
-		return new PessoaDAO().buscarTodos();
-	}
-	
-	public boolean atualizar(){
-		return new PessoaDAO().atualizar(this);
-	}
-	
-	public boolean remover(){
-		return new PessoaDAO().remover(this.getIdUsuario());
-	}
-	
-	public Usuario buscarID(){
-		return new PessoaDAO().buscarID(this.getIdUsuario());
-	}	
-	
 }

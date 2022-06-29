@@ -23,7 +23,7 @@ public class UsuarioDAO {
 		Class.forName("com.mysql.jdbc.Driver");
 
 		try (Connection connection = DriverManager
-				.getConnection("jdbc:mysql://localhost:3306/jsp?useSSL=false", "root", "root");
+				.getConnection("jdbc:mysql://localhost:3306/login", "root", "");
 
 				PreparedStatement preparedStatement = connection
 						.prepareStatement("select * from login where nome = ? and senha = ? ")) {

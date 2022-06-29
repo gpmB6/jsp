@@ -9,15 +9,15 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 
 import classes.Usuario;
-import dao.PessoaDAO;
+import dao.UsuarioDAO;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private PessoaDAO usuarioDAO;
+	private UsuarioDAO usuarioDAO;
 
 	public void init() {
-		usuarioDAO = new PessoaDAO();
+		usuarioDAO = new UsuarioDAO();
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
