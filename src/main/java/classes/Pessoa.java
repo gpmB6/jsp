@@ -1,7 +1,10 @@
 package classes;
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.*;
+
+import dao.PessoaDAO;
 
 @Entity
 @Table(name="pessoas") 
@@ -58,5 +61,24 @@ public class Pessoa implements Serializable {
 		return "Pessoa [id=" + idPessoa + ", nome=" + nome + ", endereco=" + endereco + "]";
 	}
 	
+	public boolean salvar() {
+		return new PessoaDAO().salvar(this);
+	}
+	
+	public List<Pessoa> buscarTodos(){
+		return new PessoaDAO().buscarTodos();
+	}
+	
+	public boolean atualizar(){
+		return new PessoaDAO().atualizar(this);
+	}
+	
+	public boolean remover(){
+		return new PessoaDAO().remover(this.getIdPessoa());
+	}
+	
+	public Pessoa buscarID(){
+		return new PessoaDAO().buscarID(this.getIdPessoa());
+	}
 
 }

@@ -12,9 +12,9 @@
 <title>Listas Colaboradores</title>
 </head>
 <body>
-    <jsp:useBean id="pessoaBean" class="classes.Usuario" scope="request"/>
+    <jsp:useBean id="pessoaBean" class="classes.Pessoa" scope="request"/>
     <%
-    List<Usuario> lista=pessoaBean.buscarTodos();  
+    List<Pessoa> lista=pessoaBean.buscarTodos();  
             request.setAttribute("listaReq",lista);
     %>  
     <table border="1">

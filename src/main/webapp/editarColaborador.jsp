@@ -17,7 +17,7 @@
         String id = String.valueOf(pessoaBean.getIdPessoa());	
         %>  
     
-        <h1>Editar Usuário</h1>
+        <h1>Editar Pessoa</h1>
         <form method ="POST" action="direcionaEdit.jsp">
         <input type="hidden" name="idPessoa" value="<%=id%>"/>  
             <p>

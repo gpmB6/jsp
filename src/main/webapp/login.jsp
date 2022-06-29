@@ -12,7 +12,7 @@
         <jsp:useBean id="usuarioBean" class="classes.Usuario" scope="request"/>
         <jsp:setProperty name="usuarioBean" property="*" /> 
         <%
-            if (UsuarioDAO.validate()) {
+            if (Usuario.validate()) {
         %>
         <jsp:forward page = "Mensagem.jsp" > 
             <jsp:param name = "nome" value = "<%=usuarioBean.getNome()%>" /> 

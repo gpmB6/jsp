@@ -10,10 +10,10 @@
 <title>Remover Colaborador</title>
 </head>
 <body>
-    <jsp:useBean id="pessoaBean" class="classes.Usuario" scope="request"/>
+    <jsp:useBean id="pessoaBean" class="classes.Pessoa" scope="request"/>
     <jsp:setProperty name="pessoaBean" property="idPessoa" param="idPessoa" />
 	<%
-		if(pessoaBean.remover()){
+			if(pessoaBean.remover()){
  	%>
 	     <jsp:forward page="listarPessoas.jsp"/>
      <%
